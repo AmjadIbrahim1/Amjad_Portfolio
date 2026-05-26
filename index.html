@@ -3787,7 +3787,273 @@
           scroll-behavior: auto;
         }
       }
-    </style>
+
+      /* ══════════════════════════════════════════════
+         RTL / ARABIC LANGUAGE SUPPORT
+      ══════════════════════════════════════════════ */
+      html[dir="rtl"] .navbar-container {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .navbar-links {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .hero-section {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .hero-content {
+        text-align: right;
+      }
+      html[dir="rtl"] .hero-buttons {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .about-content-block {
+        direction: rtl;
+      }
+      html[dir="rtl"] .projects-header {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .edu-timeline-wrapper {
+        direction: rtl;
+      }
+      html[dir="rtl"] .edu-card--right {
+        margin-right: auto;
+        margin-left: calc(50% + 48px);
+      }
+      html[dir="rtl"] .edu-card--left {
+        margin-left: auto;
+        margin-right: calc(50% + 48px);
+      }
+      html[dir="rtl"] .edu-card--right .edu-card-connector {
+        left: auto;
+        right: 100%;
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .edu-card--left .edu-card-connector {
+        right: auto;
+        left: 100%;
+        flex-direction: row;
+      }
+      html[dir="rtl"] .agriculture_skills {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .agriculture_skills .left p {
+        text-align: start;
+        justify-content: flex-start;
+      }
+      html[dir="rtl"] .agriculture_skills .right p {
+        text-align: end;
+        justify-content: flex-end;
+      }
+      html[dir="rtl"] .soft-skills-subtitle {
+        direction: rtl;
+      }
+      html[dir="rtl"] .contact-form-grid {
+        direction: rtl;
+      }
+      html[dir="rtl"] .contact-submit-row {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .section-title,
+      html[dir="rtl"] .skill-pill,
+      html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3,
+      html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6,
+      html[dir="rtl"] p, html[dir="rtl"] span, html[dir="rtl"] div,
+      html[dir="rtl"] a, html[dir="rtl"] li, html[dir="rtl"] label {
+        text-align: right;
+      }
+      html[dir="rtl"] .nav-link,
+      html[dir="rtl"] .mobile-nav-link {
+        text-align: right;
+      }
+      html[dir="rtl"] .form-group {
+        text-align: right;
+      }
+      html[dir="rtl"] .contact-note {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .contact-success {
+        direction: rtl;
+      }
+      html[dir="rtl"] .mobile-nav-link {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .hero-content h1.grad-1 {
+        text-align: right;
+      }
+      html[dir="rtl"] .hero-content h1.grad-2 {
+        text-align: right;
+      }
+      html[dir="rtl"] .hero-content p {
+        text-align: right;
+      }
+      html[dir="rtl"] .navbar-controls {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .about-content-block p {
+        text-align: right;
+      }
+      html[dir="rtl"] .card-title-row {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .badges-row {
+        justify-content: flex-start;
+      }
+      html[dir="rtl"] .education-content {
+        direction: rtl;
+      }
+      html[dir="rtl"] .skills-header {
+        direction: rtl;
+      }
+      html[dir="rtl"] .agr-subtitle {
+        direction: rtl;
+      }
+      html[dir="rtl"] .ka-container {
+        direction: rtl;
+      }
+      html[dir="rtl"] .courses-section-header {
+        direction: rtl;
+      }
+      html[dir="rtl"] .expertise-content h3,
+      html[dir="rtl"] .expertise-content p {
+        text-align: right;
+      }
+      html[dir="rtl"] .expertise-list li {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      html[dir="rtl"] .cert-header {
+        direction: rtl;
+      }
+      html[dir="rtl"] .cert-card-content {
+        text-align: right;
+      }
+      html[dir="rtl"] .cert-card-tags {
+        justify-content: flex-start;
+      }
+
+      /* ── Language Toggle Button ── */
+      .lang-toggle-btn {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius-pill);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 800;
+        font-family: "Cairo", "Syne", sans-serif;
+        transition:
+          transform 0.2s,
+          box-shadow 0.3s;
+        box-shadow: 0 2px 12px var(--shadow);
+        overflow: hidden;
+        cursor: pointer;
+        color: var(--accent-from);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        flex-shrink: 0;
+      }
+      .lang-toggle-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 4px 20px var(--glow);
+        color: var(--accent-to);
+      }
+      html[dir="rtl"] .lang-toggle-btn {
+        font-family: "Cairo", sans-serif;
+      }
+      .lang-toggle-btn .lang-label {
+        line-height: 1;
+      }
+    
+      /* ── RTL Layout Adjustments ── */
+      html[dir="rtl"] .navbar-container {
+        direction: rtl;
+      }
+      html[dir="rtl"] .navbar-controls {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .hero-content {
+        text-align: right;
+      }
+      html[dir="rtl"] .hero-buttons {
+        justify-content: flex-end;
+      }
+      html[dir="rtl"] .about-content-block {
+        text-align: right;
+      }
+      html[dir="rtl"] .projects-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .edu-section-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .orbit-center-badge {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .skills-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .agr-subtitle {
+        text-align: right;
+      }
+      html[dir="rtl"] .ka-section-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .courses-section-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .contact-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .contact-form-grid .form-group {
+        text-align: right;
+      }
+      html[dir="rtl"] .contact-submit-row {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .mobile-menu {
+        text-align: right;
+      }
+      html[dir="rtl"] .tg-badge {
+        direction: rtl;
+      }
+      html[dir="rtl"] .float-bottom-nav {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .ec-dropdown-header {
+        flex-direction: row-reverse;
+      }
+      html[dir="rtl"] .theme-dropdown-header {
+        text-align: right;
+      }
+      html[dir="rtl"] .theme-option {
+        text-align: right;
+      }
+      html[dir="rtl"] .card-body {
+        text-align: right;
+      }
+      html[dir="rtl"] .card-tags {
+        justify-content: flex-start;
+      }
+      html[dir="rtl"] .skills-columns {
+        direction: rtl;
+      }
+      html[dir="rtl"] .expertise-card {
+        text-align: right;
+      }
+      html[dir="rtl"] .toast-container {
+        right: auto;
+        left: 1.5rem;
+      }
+      html[dir="rtl"] .availability-badge {
+        flex-direction: row-reverse;
+      }
+
+</style>
   </head>
   <body>
     <!-- ══ CAT CANVAS ══ -->
@@ -3841,32 +4107,33 @@
       <div class="navbar-container">
         <a href="#home" class="navbar-logo">Amjad Ibrahim</a>
         <div class="navbar-links" id="desktop-nav-links">
-          <a href="#home" class="nav-link" data-section="home">Home</a>
-          <a href="#about" class="nav-link" data-section="about">About</a>
-          <a href="#projects" class="nav-link" data-section="projects"
+          <a href="#home" class="nav-link" data-section="home" data-i18n="nav-home">Home</a>
+          <a href="#about" class="nav-link" data-section="about" data-i18n="nav-about">About</a>
+          <a href="#projects" class="nav-link" data-section="projects" data-i18n="nav-projects"
             >Projects</a
           >
-          <a href="#education" class="nav-link" data-section="education"
+          <a href="#education" class="nav-link" data-section="education" data-i18n="nav-education"
             >Education</a
           >
-          <a href="#orbit-skills" class="nav-link" data-section="orbit-skills"
+          <a href="#orbit-skills" class="nav-link" data-section="orbit-skills" data-i18n="nav-orbit"
             >Orbit</a
           >
-          <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-          <a href="#agr-skills" class="nav-link" data-section="agr-skills"
+          <a href="#skills" class="nav-link" data-section="skills" data-i18n="nav-skills">Skills</a>
+          <a href="#agr-skills" class="nav-link" data-section="agr-skills" data-i18n="nav-agr"
             >Agr Skills</a
           >
-          <a href="#soft-skills" class="nav-link" data-section="soft-skills"
+          <a href="#soft-skills" class="nav-link" data-section="soft-skills" data-i18n="nav-soft"
             >Soft Skills</a
           >
           <a
             href="#key-achievements"
             class="nav-link"
             data-section="key-achievements"
+            data-i18n="nav-achievements"
             >Achievements</a
           >
-          <a href="#courses" class="nav-link" data-section="courses">Courses</a>
-          <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+          <a href="#courses" class="nav-link" data-section="courses" data-i18n="nav-courses">Courses</a>
+          <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav-contact">Contact</a>
           <span
             id="nav-active-pill"
             class="nav-active-pill"
@@ -3904,6 +4171,10 @@
               <div class="ec-legend" id="ec-legend"></div>
             </div>
           </div>
+          <!-- ══ LANGUAGE TOGGLE ══ -->
+          <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch language" title="English / العربية">
+            <span class="lang-label" id="lang-label">EN</span>
+          </button>
           <!-- ══ THEME BUTTON ══ -->
           <div class="theme-switcher-wrapper">
             <button id="theme-btn" class="theme-btn" aria-label="Switch theme">
@@ -3976,46 +4247,49 @@
         </div>
       </div>
       <div id="mobile-menu" class="mobile-menu" hidden>
-        <a href="#home" class="mobile-nav-link" data-section="home"
+        <a href="#home" class="mobile-nav-link" data-section="home" data-i18n="nav-home"
           ><span class="mobile-arrow">·</span> Home</a
         >
-        <a href="#about" class="mobile-nav-link" data-section="about"
+        <a href="#about" class="mobile-nav-link" data-section="about" data-i18n="nav-about"
           ><span class="mobile-arrow">·</span> About</a
         >
-        <a href="#projects" class="mobile-nav-link" data-section="projects"
+        <a href="#projects" class="mobile-nav-link" data-section="projects" data-i18n="nav-projects"
           ><span class="mobile-arrow">·</span> Projects</a
         >
-        <a href="#education" class="mobile-nav-link" data-section="education"
+        <a href="#education" class="mobile-nav-link" data-section="education" data-i18n="nav-education"
           ><span class="mobile-arrow">·</span> Education</a
         >
         <a
           href="#orbit-skills"
           class="mobile-nav-link"
           data-section="orbit-skills"
+          data-i18n="nav-orbit"
           ><span class="mobile-arrow">·</span> Orbit</a
         >
-        <a href="#skills" class="mobile-nav-link" data-section="skills"
+        <a href="#skills" class="mobile-nav-link" data-section="skills" data-i18n="nav-skills"
           ><span class="mobile-arrow">·</span> Skills</a
         >
-        <a href="#agr-skills" class="mobile-nav-link" data-section="agr-skills"
+        <a href="#agr-skills" class="mobile-nav-link" data-section="agr-skills" data-i18n="nav-agr"
           ><span class="mobile-arrow">·</span> Agr Skills</a
         >
         <a
           href="#soft-skills"
           class="mobile-nav-link"
           data-section="soft-skills"
+          data-i18n="nav-soft"
           ><span class="mobile-arrow">·</span> Soft Skills</a
         >
         <a
           href="#key-achievements"
           class="mobile-nav-link"
           data-section="key-achievements"
+          data-i18n="nav-achievements"
           ><span class="mobile-arrow">·</span> Achievements</a
         >
-        <a href="#courses" class="mobile-nav-link" data-section="courses"
+        <a href="#courses" class="mobile-nav-link" data-section="courses" data-i18n="nav-courses"
           ><span class="mobile-arrow">·</span> Courses</a
         >
-        <a href="#contact" class="mobile-nav-link" data-section="contact"
+        <a href="#contact" class="mobile-nav-link" data-section="contact" data-i18n="nav-contact"
           ><span class="mobile-arrow">·</span> Contact</a
         >
       </div>
@@ -4033,21 +4307,21 @@
       <section id="home">
         <div class="availability-badge">
           <div class="ping-dot"></div>
-          <p>Available for new projects</p>
+          <p data-i18n="available">Available for new projects</p>
         </div>
         <div class="hero-section" id="hero-anim">
           <div class="hero-content">
             <h1 class="grad-1">
               <span id="typing-text"></span><span class="typing-caret"></span>
             </h1>
-            <h1 class="grad-2">I build things for the WEB</h1>
-            <p>Discover the bespoke solutions and projects delivered.</p>
+            <h1 class="grad-2" data-i18n="hero-title">I build things for the WEB</h1>
+            <p data-i18n="hero-subtitle">Discover the bespoke solutions and projects delivered.</p>
             <div class="hero-buttons">
               <a
                 href="https://drive.google.com/file/d/1_BcBhf9TOsyhcTvUDNCMkpTCuMh6j8Iu/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="join-button"
+                class="join-button" data-i18n="hero-resume"
                 >My Resume</a
               >
             </div>
@@ -4083,7 +4357,8 @@
       <section id="about">
         <div class="about-section">
           <div class="about-content-block">
-            <h1>👤 About Me</h1>
+            <h1 data-i18n="about-title">👤 About Me</h1>
+            <div data-i18n="about-text">
 
             <p>
               Hi, I'm
@@ -4115,6 +4390,7 @@
               >
               every day.
             </p>
+            </div>
           </div>
         </div>
       </section>
@@ -4123,8 +4399,8 @@
       <section id="projects">
         <div class="projects-section">
           <div class="projects-header">
-            <h2 class="section-title" style="margin-bottom: 0">🚀 Projects</h2>
-            <a href="#" class="explore-link">Explore more →</a>
+            <h2 class="section-title" style="margin-bottom: 0" data-i18n="projects-title">🚀 Projects</h2>
+            <a href="#" class="explore-link" data-i18n="projects-explore">Explore more →</a>
           </div>
           <div class="projects-grid">
             <div class="project-card-wrap box">
@@ -4347,9 +4623,9 @@
         <div class="edu-glow edu-glow-3"></div>
 
         <div class="edu-section-header" id="edu-header-anim">
-          <div class="edu-label">Timeline</div>
-          <h2>My <span class="edu-accent-word">Education</span></h2>
-          <p>Bachelor's Degree — Computer Science & Information Systems</p>
+          <div class="edu-label" data-i18n="edu-label">Timeline</div>
+          <h2 data-i18n="edu-title">My <span class="edu-accent-word">Education</span></h2>
+          <p data-i18n="edu-subtitle">Bachelor's Degree — Computer Science & Information Systems</p>
         </div>
 
         <div class="edu-timeline-wrapper" id="eduTimelineWrapper">
@@ -4488,7 +4764,7 @@
 
               <div class="orbit-center-badge">
                 <span class="center-icon">⚡</span>
-                <span class="center-label">skills</span>
+                <span class="center-label" data-i18n="orbit-center">skills</span>
               </div>
 
               <!-- Outermost ring — Frontend & Core Web -->
@@ -4708,7 +4984,7 @@
       <section id="skills">
         <div class="skills-section-wrapper" id="skillsSectionWrapper">
           <div class="skills-header">
-            <h2 class="skills-title">🛠 Tech Stack</h2>
+            <h2 class="skills-title" data-i18n="skills-title">🛠 Tech Stack</h2>
           </div>
           <div class="skills-columns" id="skillsColumns"></div>
         </div>
@@ -4717,7 +4993,7 @@
       <!-- AGRICULTURAL SKILLS -->
       <section id="agr-skills">
         <div class="agr-subtitle mt-5 box" style="margin-top: 3rem">
-          <h3>Agricultural skills</h3>
+          <h3 data-i18n="nav-agr">Agricultural skills</h3>
         </div>
         <div
           class="agriculture_skills"
@@ -4786,7 +5062,7 @@
       <!-- SOFT SKILLS -->
       <section id="soft-skills">
         <div class="soft_skills">
-          <div class="soft-skills-subtitle"><h3>Soft Skills</h3></div>
+          <div class="soft-skills-subtitle"><h3 data-i18n="nav-soft">Soft Skills</h3></div>
           <div class="marquee-outer" id="marqueeOuter"></div>
         </div>
       </section>
@@ -4796,10 +5072,10 @@
         <div class="ka-container">
           <div class="ka-label-wrap">
             <div class="ka-label-line"></div>
-            <div class="ka-section-label" id="ka-label">Highlights</div>
+            <div class="ka-section-label" id="ka-label" data-i18n="ka-label">Highlights</div>
             <div class="ka-label-line right"></div>
           </div>
-          <h2 class="ka-heading" id="ka-heading">🏆 Key Achievements</h2>
+          <h2 class="ka-heading" id="ka-heading" data-i18n="ka-heading">🏆 Key Achievements</h2>
 
           <div class="ka-stats">
             <div class="ka-stat">
@@ -5040,9 +5316,9 @@
       <section id="courses" aria-label="My Courses">
         <div class="courses-inner">
           <div class="courses-section-header" id="coursesHeader">
-            <div class="courses-label">Expertise</div>
-            <h2 class="courses-section-title">My Courses</h2>
-            <p class="courses-section-sub">
+            <div class="courses-label" data-i18n="courses-label">Expertise</div>
+            <h2 class="courses-section-title" data-i18n="courses-title">My Courses</h2>
+            <p class="courses-section-sub" data-i18n="courses-sub">
               Core domains where I deliver real results
             </p>
           </div>
@@ -5119,9 +5395,9 @@
         <div class="contact-inner">
           <!-- Header -->
           <div class="contact-header" id="contactHeader">
-            <div class="contact-label">Get In Touch</div>
-            <h2 class="contact-title">Let's <span>Work Together</span></h2>
-            <p class="contact-subtitle">
+            <div class="contact-label" data-i18n="contact-label">Get In Touch</div>
+            <h2 class="contact-title"><span data-i18n="contact-title">Let's Work Together</span></h2>
+            <p class="contact-subtitle" data-i18n="contact-subtitle">
               Have a project in mind? Fill the form and your message lands
               directly in my Telegram — I usually reply within a few hours.
             </p>
@@ -5137,62 +5413,62 @@
             <div id="contact-form-wrap">
               <div class="contact-form-grid">
                 <div class="form-group">
-                  <label class="form-label" for="ct-name">Your Name</label>
+                  <label class="form-label" for="ct-name" data-i18n="contact-name-label">Your Name</label>
                   <input
                     class="form-input"
                     id="ct-name"
                     type="text"
-                    placeholder="Amjad Ibrahim"
+                    placeholder="Amjad Ibrahim" data-i18n="contact-name-placeholder"
                     autocomplete="name"
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="ct-email">Email Address</label>
+                  <label class="form-label" for="ct-email" data-i18n="contact-email-label">Email Address</label>
                   <input
                     class="form-input"
                     id="ct-email"
                     type="email"
-                    placeholder="hello@example.com"
+                    placeholder="hello@example.com" data-i18n="contact-email-placeholder"
                     autocomplete="email"
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="ct-subject">Subject</label>
+                  <label class="form-label" for="ct-subject" data-i18n="contact-subject-label">Subject</label>
                   <input
                     class="form-input"
                     id="ct-subject"
                     type="text"
-                    placeholder="Project Collaboration"
+                    placeholder="Project Collaboration" data-i18n="contact-subject-placeholder"
                   />
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="ct-budget"
+                  <label class="form-label" for="ct-budget" data-i18n="contact-budget-label"
                     >Budget (optional)</label
                   >
                   <input
                     class="form-input"
                     id="ct-budget"
                     type="text"
-                    placeholder="$500 – $2,000"
+                    placeholder="$500 – $2,000" data-i18n="contact-budget-placeholder"
                   />
                 </div>
                 <div class="form-group full-width">
-                  <label class="form-label" for="ct-message">Message</label>
+                  <label class="form-label" for="ct-message" data-i18n="contact-message-label">Message</label>
                   <textarea
                     class="form-textarea"
                     id="ct-message"
-                    placeholder="Tell me about your project, timeline, and any specific requirements…"
+                    placeholder="Tell me about your project, timeline, and any specific requirements…" data-i18n="contact-message-placeholder"
                   ></textarea>
                 </div>
               </div>
 
               <div class="contact-submit-row">
-                <span class="contact-note">
+                <span class="contact-note" data-i18n="contact-note">
                   <i class="fa-brands fa-telegram"></i>
                   Sent via Telegram Bot — no email required
                 </span>
                 <button class="contact-btn" id="ct-submit-btn" type="button">
-                  <span class="btn-text"
+                  <span class="btn-text" data-i18n="contact-send"
                     ><i class="fa-brands fa-telegram"></i>&nbsp; Send
                     Message</span
                   >
@@ -5204,12 +5480,12 @@
             <!-- Success state -->
             <div class="contact-success" id="contact-success">
               <div class="ct-success-icon">✅</div>
-              <div class="ct-success-title">Message Sent!</div>
-              <div class="ct-success-sub">
+              <div class="ct-success-title" data-i18n="contact-success-title">Message Sent!</div>
+              <div class="ct-success-sub" data-i18n="contact-success-text">
                 Your message has been delivered to my Telegram. I'll get back to
                 you as soon as possible!
               </div>
-              <button class="ct-send-again" id="ct-send-again">
+              <button class="ct-send-again" id="ct-send-again" data-i18n="contact-success-btn">
                 Send another message
               </button>
             </div>
@@ -6945,12 +7221,21 @@
       })();
 
       /* TYPEWRITER */
-      const lines = [
+      let currentLang = localStorage.getItem("portfolio-lang") || "en";
+
+      const linesEN = [
         "Hi, I'm Amjad Ibrahim.",
         "Full-Stack Node.js Engineer.",
         "Competitive Programmer.",
         "ICPC Mentor & Instructor.",
       ];
+      const linesAR = [
+        "مرحباً، أنا عماد إبراهيم.",
+        "مهندس Node.js كامل المكدس.",
+        "مبرمج تنافسي.",
+        "مرشد ومعلم ICPC.",
+      ];
+      let lines = currentLang === "ar" ? linesAR : linesEN;
       const typingTarget = document.getElementById("typing-text");
       let lineIndex = 0,
         charIndex = 0,
@@ -7117,28 +7402,12 @@
 
       /* ══════════════════════════════════════════════
        CONTACT — Telegram Bot Integration
-       Bot Token: 8671414298:AAHsWYkOzTvrnLt3UcN2DH2htVcecSeIG80
+       Bot Token: 8671414298:AAHyT2RlPdViAIfGL3q6OJXO_5IFVtGJ0iI
     ══════════════════════════════════════════════ */
       (function initContact() {
-        const TG_BOT_TOKEN = "8671414298:AAHsWYkOzTvrnLt3UcN2DH2htVcecSeIG80";
+        const TG_BOT_TOKEN = "8671414298:AAHyT2RlPdViAIfGL3q6OJXO_5IFVtGJ0iI";
         const TG_CHAT_ID = "7389806651"; // ← أضف السطر ده
         let resolvedChatId = null;
-
-        async function getChatId() {
-          if (resolvedChatId) return resolvedChatId;
-          try {
-            const res = await fetch(
-              `https://api.telegram.org/bot${TG_BOT_TOKEN}/getUpdates?limit=1&allowed_updates=["message"]`,
-            );
-            const data = await res.json();
-            if (data.ok && data.result && data.result.length > 0) {
-              resolvedChatId =
-                data.result[data.result.length - 1].message.chat.id;
-              return resolvedChatId;
-            }
-          } catch (e) {}
-          return null;
-        }
 
         async function sendTelegramMessage(text) {
           const res = await fetch(
@@ -7320,6 +7589,210 @@
       })();
 
       window.PortfolioAPI = { setTheme: applyNavTheme, toast: showToast };
+
+      /* ══════════════════════════════════════════════
+         ARABIC / ENGLISH I18N SYSTEM
+      ══════════════════════════════════════════════ */
+      const translations = {
+        ar: {
+          // Nav
+          "nav-home": "الرئيسية",
+          "nav-about": "من أنا",
+          "nav-projects": "المشاريع",
+          "nav-education": "التعليم",
+          "nav-orbit": "المهارات",
+          "nav-skills": "التقنيات",
+          "nav-agr": "الزراعية",
+          "nav-soft": "الشخصية",
+          "nav-achievements": "الإنجازات",
+          "nav-courses": "الدورات",
+          "nav-certifications": "الشهادات",
+          "nav-contact": "اتصل بي",
+          // Loading
+          "loader-init": "جاري التحميل...",
+          // Availability
+          "available": "متاح للمشاريع الجديدة",
+          // Hero
+          "hero-title": "أبني أشياء للويب",
+          "hero-subtitle": "اكتشف الحلول المخصصة والمشاريع المُنجزة.",
+          "hero-typing": ["مطور واجهات أمامية","مبرمج","مُعلّم","مهندس برمجيات"],
+          "hero-resume": "سيرتي الذاتية",
+          // About
+          "about-title": "👤 من أنا",
+          "about-text": "مرحباً، أنا عماد إبراهيم. مطور واجهات أمامية شغوف ببناء تطبيقات ويب ديناميكية ومتجاوبة. لدي خبرة قوية في مجال الويب وأسعى دائماً لتقديم أفضل الحلول التقنية.",
+          // Projects
+          "projects-title": "🚀 المشاريع",
+          "projects-explore": "استعرض الكل",
+          // Education
+          "edu-label": "التعليم",
+          "edu-title": "رحلتي في <span class=\"edu-accent-word\">التعليم</span>",
+          "edu-accent": "التعليم",
+          "edu-subtitle": "بكالوريوس علوم الحاسب ونظم المعلومات",
+          "edu-year1": "السنة الأولى (2022–2023)",
+          "edu-year1-desc": "أسس البرمجة، الدوائر الرقمية، أساسيات تقنية المعلومات، الرياضيات، الفيزياء",
+          "edu-year2": "السنة الثانية (2023–2024)",
+          "edu-year2-desc": "هياكل البيانات، الخوارزميات، البرمجة كائنية التوجه، أساسيات قواعد البيانات، إدارة نظم المعلومات",
+          "edu-year3": "السنة الثالثة (2024–2025)",
+          "edu-year3-desc": "تطوير البرمجيات، شبكات الحاسب، أنظمة التشغيل، إدارة المشاريع، استراتيجية نظم المعلومات",
+          "edu-year4": "السنة الرابعة (2025–2026)",
+          "edu-year4-desc": "قواعد بيانات متقدمة، أنظمة الشبكات، ضمان الجودة، مشروع التخرج",
+          // Orbit
+          "orbit-label": "الفضاء التقني",
+          "orbit-title": "الكون التقني",
+          "orbit-subtitle": "تقنيات أعمل بها يومياً",
+          "orbit-center": "مهارات",
+          // Skills
+          "skills-title": "🛠 الركام التقني",
+          "skills-subtitle": "تقنيات وأدوات أستخدمها بانتظام",
+          // Soft Skills
+          "soft-title": "المهارات الشخصية",
+          // Key Achievements
+          "ka-label": "الإنجازات الرئيسية",
+          "ka-heading": "إحصائيات وأرقام",
+          "ka-1": "طالباً تم تدريبهم",
+          "ka-2": "مشكلة تم حلها",
+          "ka-3": "سنوات من التدريس",
+          "ka-4": "إنجازات كبرى",
+          "ka-slide-1": "مدرب مجتمع ICPC — تدريب المتنافسين على البرمجة التنافسية",
+          "ka-slide-2": "مدرس لأكثر من 1500 طالب — تقديم دورات ودروس",
+          "ka-slide-3": "قناة Mego Code على يوتيوب — تبسيط علوم الحاسوب",
+          "ka-slide-4": "مصمم امتحانات C++ (Helpers Assiut)",
+          "ka-slide-5": "أكثر من 793 مشكلة محلولة — رحلة حل التحديات",
+          "ka-slide-6": "منصة مدرسة الغانم — منصة تعليمية متكاملة",
+          // Courses
+          "courses-label": "الخبرات",
+          "courses-title": "دوراتي",
+          "courses-sub": "المجالات الأساسية حيث أقدم نتائج حقيقية",
+          // Certifications
+          "cert-label": "الشهادات",
+          "cert-title": "الشهادات المهنية",
+          "cert-subtitle": "شهادات مهنية تثبت خبراتي",
+          "cert-1": "مهندس معماري للحلول السحابية AWS",
+          "cert-2": "مهندس بيانات Google Cloud",
+          "cert-3": "مطور Meta Front-End",
+          "cert-4": "أساسيات MongoDB",
+          "cert-5": "محترف Docker و Kubernetes",
+          "cert-6": "أساسيات Python",
+          // Contact
+          "contact-label": "تواصل",
+          "contact-title": "تواصل معي",
+          "contact-subtitle": "املأ النموذج وسيتم إرسال رسالتك عبر تلغرام",
+          "contact-name-label": "الاسم",
+          "contact-name-placeholder": "عماد إبراهيم",
+          "contact-email-label": "البريد الإلكتروني",
+          "contact-email-placeholder": "مرحباً@example.com",
+          "contact-subject-label": "الموضوع",
+          "contact-subject-placeholder": "تعاون في مشروع",
+          "contact-budget-label": "الميزانية (اختياري)",
+          "contact-budget-placeholder": "500$ – 2,000$",
+          "contact-message-label": "الرسالة",
+          "contact-message-placeholder": "أخبرني عن مشروعك والجدول الزمني والمتطلبات...",
+          "contact-send": '<i class="fa-brands fa-telegram"></i>&nbsp; إرسال الرسالة',
+          "contact-success-title": "تم الإرسال! 🎉",
+          "contact-success-text": "شكراً لتواصلك! سأرد عليك خلال 24 ساعة عادةً.",
+          "contact-success-btn": "إرسال رسالة أخرى",
+          "contact-note": '<i class="fa-brands fa-telegram"></i> تُرسل عبر تلغرام • رد سريع',
+          // Theme
+          "theme-header": "اختر السمة",
+          "theme-default": "الافتراضية",
+          "theme-default-desc": "السمة الخضراء الكلاسيكية",
+          "theme-neon": "نيون",
+          "theme-neon-desc": "إضاءة نيون زاهية",
+          "theme-minimal": "بسيطة",
+          "theme-minimal-desc": "فاتحة ونظيفة",
+          "theme-footer": "تُطبق السمة فوراً",
+          // Clock
+          "clock-title": "الساعة الرقمية",
+          // Toggle
+          "lang-ar": "AR",
+          "lang-en": "EN",
+        }
+      };
+
+      function applyLanguage(lang) {
+        const isRtl = lang === "ar";
+        const html = document.documentElement;
+        html.setAttribute("dir", isRtl ? "rtl" : "ltr");
+        html.setAttribute("lang", lang);
+        html.classList.toggle("rtl", isRtl);
+
+        // Update toggle button label
+        const langLabel = document.getElementById("lang-label");
+        if (langLabel) {
+          langLabel.textContent = lang === "ar" ? "EN" : "AR";
+        }
+
+        const langBtn = document.getElementById("lang-toggle");
+        if (langBtn) {
+          langBtn.title = lang === "ar" ? "English / العربية" : "العربية / English";
+          langBtn.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "التبديل إلى العربية");
+        }
+
+        localStorage.setItem("portfolio-lang", lang);
+        currentLang = lang;
+
+        const t = translations[lang];
+        if (!t) return;
+
+        // Nav links
+        document.querySelectorAll(".nav-link, .mobile-nav-link").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (key && t[key]) {
+            const span = el.querySelector(".mobile-arrow");
+            if (span) {
+              el.childNodes.forEach(node => {
+                if (node.nodeType === 3 && node.textContent.trim()) {
+                  node.textContent = " " + t[key] + " ";
+                }
+              });
+            } else {
+              el.childNodes.forEach(node => {
+                if (node.nodeType === 3 && node.textContent.trim()) {
+                  node.textContent = t[key];
+                }
+              });
+            }
+          }
+        });
+
+        // General data-i18n elements
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (key && t[key] && !el.classList.contains("nav-link") && !el.classList.contains("mobile-nav-link")) {
+            if (el.placeholder !== undefined && el.tagName !== "LABEL") {
+              el.placeholder = t[key];
+            } else if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+              el.placeholder = t[key];
+            } else if (el.tagName === "LABEL" || el.tagName === "SPAN" || el.tagName === "DIV" || el.tagName === "H1" || el.tagName === "H2" || el.tagName === "H3" || el.tagName === "H5" || el.tagName === "P" || el.tagName === "BUTTON") {
+              el.innerHTML = t[key];
+            } else {
+              el.textContent = t[key];
+            }
+          }
+        });
+
+        // Update hero typing on language change
+        if (lang === "ar") {
+          lines = linesAR;
+        } else {
+          lines = linesEN;
+        }
+        lineIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+        typingTarget.textContent = "";
+        // Trigger custom event for other components
+        document.dispatchEvent(new CustomEvent("languageChanged", { detail: { lang } }));
+      }
+
+      // Initialize language on load
+      applyLanguage(currentLang);
+
+      // Toggle button handler
+      document.getElementById("lang-toggle")?.addEventListener("click", function() {
+        const newLang = currentLang === "en" ? "ar" : "en";
+        applyLanguage(newLang);
+      });
     </script>
   </body>
 </html>
