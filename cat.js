@@ -1,7 +1,6 @@
 /**
  * cat.js
- * قطة صغيرة بهيكل جسمي كامل (رأس + جسم + أيدي + رجلين + ذيل)
- * بتجري ورا الـ cursor
+ * A playful cat that chases the cursor on screen.
  */
 (function () {
   const canvas = document.getElementById('cat-canvas');
